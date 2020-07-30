@@ -1,0 +1,17 @@
+<!DOCTYPE html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0;" name=viewport><link rel=icon href=favicon.ico><title>mpaasvue</title><script src=https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js></script><script src=https://cdn.bootcss.com/vConsole/3.3.4/vconsole.min.js></script><script src=https://appx/web-view.min.js></script><script>if (navigator.userAgent.indexOf('AlipayClient') > -1 || navigator.userAgent.indexOf('mPaaSClient') > -1) {
+        document.writeln('<script src="https://appx/web-view.min.js"' + '>' + '<' + '/' + 'script>');
+      }
+      // javascript
+      my.navigateTo({url: '../get-user-info/get-user-info'});
+      // 网页向小程序 postMessage 消息
+      my.postMessage({name:"测试web-view"});
+      // 接收来自小程序的消息。
+      my.onMessage = function(e) {
+        console.log(e); //{'sendToWebView': '1'}
+      }
+      // 判断是否运行在小程序环境里
+      my.getEnv(function(res) {
+        console.log(res.miniprogram) // true
+      });
+      my.startShare();</script><link href=static/css/about.9ba5be64.css rel=prefetch><link href=static/css/chunk-2b3c7241.754490b4.css rel=prefetch><link href=static/js/about.7394f9de.js rel=prefetch><link href=static/js/chunk-2b3c7241.9e7ca030.js rel=prefetch><link href=static/css/chunk-vendors.c7bb7180.css rel=preload as=style><link href=static/css/main.e9cf6543.css rel=preload as=style><link href=static/js/chunk-vendors.f7563fab.js rel=preload as=script><link href=static/js/main.90fea9ac.js rel=preload as=script><link href=static/css/chunk-vendors.c7bb7180.css rel=stylesheet><link href=static/css/main.e9cf6543.css rel=stylesheet></head><body><noscript><strong>We're sorry but mpaasvue doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=app></div><script>var vConsole = new VConsole();
+      console.log('Hello world');</script><script src=static/js/chunk-vendors.f7563fab.js></script><script src=static/js/main.90fea9ac.js></script></body></html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon href=favicon.ico><script src=https://appx/web-view.min.js></script><script src=https://cdn.bootcss.com/vConsole/3.3.4/vconsole.min.js></script><script>var vConsole = new VConsole();
+      if (navigator.userAgent.indexOf('AlipayClient') > -1 || navigator.userAgent.indexOf('mPaaSClient') > -1) {
+        document.writeln('<script src="https://appx/web-view.min.js"' + '>' + '<' + '/' + 'script>');
+      }
+      // javascript
+      my.navigateTo({url: '../get-user-info/get-user-info'});
+      // 网页向小程序 postMessage 消息
+      my.postMessage({name:"测试web-view"});
+      // 接收来自小程序的消息。
+      my.onMessage = function(e) {
+        console.log(e); //{'sendToWebView': '1'}
+      }
+      // 判断是否运行在小程序环境里
+      my.getEnv(function(res) {
+        console.log(res.miniprogram) // true
+      });
+      my.startShare();</script><title>登录页</title><link href=static/js/chunk-b245ec3a.9d507276.js rel=prefetch><link href=static/css/chunk-vendors.c7bb7180.css rel=preload as=style><link href=static/css/login.f09af7aa.css rel=preload as=style><link href=static/js/chunk-vendors.f7563fab.js rel=preload as=script><link href=static/js/login.97d96c5b.js rel=preload as=script><link href=static/css/chunk-vendors.c7bb7180.css rel=stylesheet><link href=static/css/login.f09af7aa.css rel=stylesheet></head><body><a href=index.html></a><noscript><strong>We're sorry but mpaasvue doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=login></div><script src=static/js/chunk-vendors.f7563fab.js></script><script src=static/js/login.97d96c5b.js></script></body></html>
